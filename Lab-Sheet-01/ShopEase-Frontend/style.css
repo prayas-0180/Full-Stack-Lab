@@ -1,0 +1,349 @@
+/* ==============================
+   CSS VARIABLES
+   ============================== */
+
+   :root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e293b;
+    --accent-color: #f59e0b;
+    --background-color: #f8fafc;
+}
+
+
+/* ==============================
+   GENERAL STYLING
+   ============================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+}
+
+
+/* ==============================
+   HEADER & NAVBAR
+   ============================== */
+
+header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 20px 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+
+/* ==============================
+   HERO SECTION
+   ============================== */
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 20px;
+}
+
+
+/* ==============================
+   CONTAINER
+   ============================== */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* ==============================
+   BUTTON
+   ============================== */
+
+.btn,
+button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: #111827;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover,
+.btn:hover {
+    opacity: 0.85;
+}
+
+
+/* ==============================
+   PRODUCT GRID
+   ============================== */
+
+.product-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+/* ==============================
+   PRODUCT CARDS
+   ============================== */
+
+.product-card {
+    background-color: white;
+    padding: 20px;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+    text-align: center;
+}
+
+.product-card img {
+    width: 100%;
+    max-width: 250px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    margin: 15px 0 10px;
+}
+
+.price {
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+/* ==============================
+   PRODUCT DETAIL
+   ============================== */
+
+.product-detail {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+
+    background-color: white;
+    padding: 40px;
+
+    border-radius: 10px;
+}
+
+.product-detail img {
+    width: 400px;
+    max-width: 100%;
+}
+
+.product-info {
+    flex: 1;
+}
+
+.product-info h2 {
+    font-size: 32px;
+}
+
+.product-info p {
+    line-height: 1.7;
+}
+
+.product-info input {
+    width: 70px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+
+/* ==============================
+   CART TABLE
+   ============================== */
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+.cart-table th,
+.cart-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.cart-table th {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.total-row {
+    font-weight: bold;
+    background-color: #e2e8f0;
+}
+
+.checkout-link {
+    text-align: right;
+    margin-top: 25px;
+}
+
+
+/* ==============================
+   CHECKOUT FORM
+   ============================== */
+
+.checkout-form {
+    max-width: 600px;
+    margin: auto;
+
+    background-color: white;
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.checkout-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    font-size: 16px;
+}
+
+.checkout-form input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+}
+
+.radio-label {
+    font-weight: normal !important;
+}
+
+.radio-label input {
+    margin-right: 8px;
+}
+
+.checkout-form button {
+    width: 100%;
+    margin-top: 25px;
+    font-size: 17px;
+}
+
+
+/* ==============================
+   FOOTER
+   ============================== */
+
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+
+/* ==============================
+   RESPONSIVE DESIGN
+   ============================== */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .product-detail {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .cart-table {
+        font-size: 14px;
+    }
+
+    .cart-table th,
+    .cart-table td {
+        padding: 8px;
+    }
+}
